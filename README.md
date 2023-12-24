@@ -1,16 +1,31 @@
-## Commands
+# Boilerplate React para Desenvolvimento Rápido
 
-- `dev`: runs your application on `localhost:3000`
-- `build`: creates the production build version
-- `start`: starts a simple server with the build production code
-- `lint`: runs the linter in all components and pages
-- `test`: runs jest to test all components and pages
-- `test:watch`: runs jest in watch mode
-- `storybook`: runs storybook on `localhost:6006`
-- `build-storybook`: create the build version of storybook
+Este boilerplate React proporciona uma estrutura pronta para uso, acelerando o início de novos projetos. Destaques incluem:
 
-## Deploy on Vercel
+- **Configuração Jest:** Facilita testes unitários e de integração.
+- **Integração Axios, Serviços e Cookies:** Pronto para chamadas de API, gerenciamento de serviços e manipulação de cookies.
+- **Funções de Validação de Autorização via SSR:** Integradas com os serviços para facilitar a implementação de validação de autorização no lado do servidor.
+- **Storybook:** Configuração para desenvolvimento e documentação de componentes React isolados.
+- **Custom Event Manager:** Gerenciador de eventos.
+- **Toast:** Sistema de toasts altamente flexível para notificações customizadas.
+- **React Query:** Facilita a manipulação eficiente de dados no estado global.
+- **Providers Setup:** Configuração inicial de context providers.
+- **Styled Components Theme:** Setup inicial com tema preconfigurado.
+- **Custom Hooks:** Conjunto de hooks prontos para uso.
+- **Componentes Compartilhados:** Incluindo Modal Portal.
+- **Utilitários de Validação e Formatação:** Funções utilitárias para código mais limpo.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Comandos
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `dev`: Executa a aplicação em `localhost:3000`.
+- `build`: Cria a versão de produção.
+- `start`: Inicia um servidor com o código de produção.
+- `lint`: Executa o linter em todos os componentes e páginas.
+- `test`: Executa testes com Jest.
+- `test:watch`: Executa Jest em modo de observação.
+- `storybook`: Executa o Storybook em `localhost:6006`.
+- `build-storybook`: Cria a versão de produção do Storybook.
+
+## Deploy no Vercel
+
+Utilize a [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) para implantar facilmente seu aplicativo Next.js. Consulte a [documentação de implantação do Next.js](https://nextjs.org/docs/deployment) para mais detalhes.
