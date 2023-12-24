@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalContent /> should render the content 1`] = `
+.c0 {
+  margin-top: 3.2rem;
+}
+
+<main
+  class="c0"
+>
+  Test Content
+</main>
+`;

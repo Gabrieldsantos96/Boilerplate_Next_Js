@@ -8,7 +8,14 @@ module.exports = {
     '!src/lib/registry.tsx',
     '!src/types/**',
     '!src/**/stories.tsx',
-    '!src/styles/**'
+    '!src/styles/**',
+    '!src/configs/**',
+    '!src/lib/**',
+    '!src/providers/**',
+    'src/lib/eventManager.ts',
+    '!src/utils/helpers/auth/**',
+    '!src/services/**',
+    '!src/utils/helpers/delay.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/'],
@@ -20,6 +27,7 @@ module.exports = {
   // we should to force it to use the browser version
   moduleNameMapper: {
     '^styled-components':
-      'styled-components/dist/styled-components.browser.cjs.js'
+      'styled-components/dist/styled-components.browser.cjs.js',
+    '@/(.*)': '<rootDir>/src/$1'
   }
 }

@@ -1,3 +1,5 @@
+import path from 'path'
+
 const config = {
   staticDirs: ['../public'],
   stories: ['../src/components/**/stories.tsx'],
@@ -9,8 +11,8 @@ const config = {
   docs: {
     autodocs: true
   },
-  webpackFinal: (config) => {
-    config.resolve.modules.push(`${process.cwd()}/src`)
+  webpackFinal: async (config) => {
+    config.resolve.alias['@'] = path.resolve(__dirname, '../src')
     return config
   }
 }
