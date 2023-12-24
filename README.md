@@ -16,6 +16,7 @@ Este boilerplate React proporciona uma estrutura pronta para uso, acelerando o i
 - **Utilitários de Validação e Formatação:** Funções utilitárias para código mais limpo.
 - **CI:** Testes automáticos configurados para execução em Pull Requests.
 - **Prettier e ESLint:** Enforce de estilo de código com Prettier e alerta de erros com ESLint.
+- **Criação de Componente via Script:** Script para criação rápida de novos componentes.
 
 ## Comandos
 
@@ -27,6 +28,7 @@ Este boilerplate React proporciona uma estrutura pronta para uso, acelerando o i
 - `test:watch`: Executa Jest em modo de observação.
 - `storybook`: Executa o Storybook em `localhost:6006`.
 - `build-storybook`: Cria a versão de produção do Storybook.
+- `generate`: Cria um componente pré-configurado.
 
 ## Deploy no Vercel
 
