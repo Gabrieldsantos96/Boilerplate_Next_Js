@@ -1,5 +1,5 @@
 import { renderHook, act } from '@testing-library/react'
-import { useEscapeKey } from './useEscapeKey'
+import { useEscapeKey } from '.'
 import React from 'react'
 
 describe('useModal', () => {

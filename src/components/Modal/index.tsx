@@ -3,7 +3,7 @@
 import React, { forwardRef } from 'react'
 import { useModal, ModalRefProps } from './useModal'
 import { M } from './composition'
-import { useEscapeKey } from '../../hooks/useEscapeKey/useEscapeKey'
+import { useEscapeKey } from '../../hooks/useEscapeKey'
 import ModalTitle, { ModalTitleProps } from './ModalTitle'
 import { ModalContentProps } from './ModalContent'
 import { ModalFooterProps } from './ModalFooter'
