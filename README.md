@@ -12,7 +12,7 @@ Este boilerplate React proporciona uma estrutura pronta para uso, acelerando o i
 - **Providers Setup:** Configuração inicial de context providers.
 - **Styled Components Theme:** Setup inicial com tema preconfigurado.
 - **Custom Hooks:** Conjunto de hooks prontos para uso.
-- **Componentes Compartilhados:** Incluindo Modal Portal.
+- **Componentes Utilitários:** Dropdown,Modal,Portal,Toast
 - **Utilitários de Validação e Formatação:** Funções utilitárias.
 - **CI:** Testes automáticos configurados para execução em Pull Requests.
 - **Prettier e ESLint:** Enforce de estilo de código com Prettier e alerta de erros com ESLint.
