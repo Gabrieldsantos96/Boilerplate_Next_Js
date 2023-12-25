@@ -1,7 +1,7 @@
 import { render } from '@/utils/helpers/testUtils'
 
 import ToastContainer from '.'
-import theme from '@/styles/theme'
+import theme from '@/styles/lightTheme'
 
 describe('<ToastContainer />', () => {
   it('should render toast container', () => {

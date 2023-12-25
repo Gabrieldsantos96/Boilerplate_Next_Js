@@ -3,7 +3,7 @@ import { screen, fireEvent } from '@testing-library/react'
 import { render } from '@/utils/helpers/testUtils'
 import '@testing-library/jest-dom'
 import ToastMessage, { ToastMessageProps } from '.'
-import theme from '@/styles/theme'
+import theme from '@/styles/lightTheme'
 
 const mockOnRemoveMessage = jest.fn()
 

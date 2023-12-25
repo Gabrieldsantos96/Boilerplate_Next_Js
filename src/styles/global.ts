@@ -61,12 +61,12 @@ const GlobalStyles = createGlobalStyle`
   ${({ theme }) => css`
     * {
       font-family: ${theme.font.family};
+      color: ${theme.colors.gray[900]};
     }
 
     body {
       background: ${theme.colors.background};
       font-size: ${theme.font.sizes.medium};
-      color: ${theme.colors.gray[900]};
     }
   `}
 

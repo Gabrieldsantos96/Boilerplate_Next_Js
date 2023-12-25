@@ -2,7 +2,7 @@ import { ReactElement } from 'react'
 import { RenderOptions, render } from '@testing-library/react'
 
 import { ThemeProvider } from 'styled-components'
-import theme from '@/styles/theme'
+import theme from '@/styles/lightTheme'
 
 type CustomRenderProps = Omit<RenderOptions, 'queries'>
 

@@ -1,6 +1,6 @@
 import { render } from '@/utils/helpers/testUtils'
 
-import theme from '@/styles/theme'
+import theme from '@/styles/lightTheme'
 import { fireEvent, getByRole } from '@testing-library/react'
 import ToastList from '.'
 

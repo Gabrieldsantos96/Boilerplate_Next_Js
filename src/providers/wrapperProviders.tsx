@@ -5,18 +5,22 @@ import ToastContainer from '@/components/Toast/ToastContainer'
 import { ThemeProvider } from 'styled-components'
 import { QueryProvider } from '@/lib/queryProvider'
 import GlobalStyles from '@/styles/global'
-import theme from '@/styles/theme'
+import { themeEventManager } from '@/utils/helpers/toggleTheme'
+import { useTheme } from '@/hooks/useTheme'
+import { DefaultTheme } from 'styled-components/dist/types'
 
 export function Providers({ children }: PropsWithChildren) {
+  const theme = useTheme({ themeEventManager })
+
   return (
     <>
-      <QueryProvider>
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme.themeConfig as DefaultTheme}>
+        <QueryProvider>
           <ToastContainer />
           <GlobalStyles />
           {children}
-        </ThemeProvider>
-      </QueryProvider>
+        </QueryProvider>
+      </ThemeProvider>
     </>
   )
 }

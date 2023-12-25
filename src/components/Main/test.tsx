@@ -1,26 +1,38 @@
-import { render, screen } from '@testing-library/react'
-
+import { screen, waitFor } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
+import { render } from '@/utils/helpers/testUtils'
 import Main from '.'
+
+jest.mock('@/utils/helpers/toggleTheme', () => ({
+  __esModule: true,
+  toggleTheme: jest.fn()
+}))
 
 describe('<Main />', () => {
   it('should render the heading', () => {
-    // renderiza o component
     const { container } = render(<Main />)
-
-    // busca o elemento e verifica a existência dele
-    expect(
-      screen.getByRole('heading', { name: /react avançado/i })
-    ).toBeInTheDocument()
-
-    // gerar snapshot
     expect(container.firstChild).toMatchSnapshot()
   })
 
   it('should render the colors correctly', () => {
-    // renderiza o component
     const { container } = render(<Main />)
+    expect(container.firstChild).toHaveStyle({
+      width: '100%',
+      height: '100%',
+      padding: '3rem'
+    })
+  })
 
-    // verifica se o background-color está correto
-    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
+  it('should toggle the theme on button click', async () => {
+    render(<Main />)
+
+    userEvent.click(screen.getByText('toggleTheme'))
+
+    await waitFor(() => {
+      expect(
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        require('@/utils/helpers/toggleTheme').toggleTheme
+      ).toHaveBeenCalled()
+    })
   })
 })
