@@ -10,7 +10,7 @@ Este boilerplate React proporciona uma estrutura pronta para uso, acelerando o i
 - **Toast:** Sistema de toasts altamente flexível para notificações customizadas.
 - **React Query:** Facilita a manipulação eficiente de dados no estado global.
 - **Providers Setup:** Configuração inicial de context providers.
-- **Styled Components Theme:** Setup inicial com tema preconfigurado.
+- **Styled Components Theme:** Setup inicial com tema e toggle theme.
 - **Custom Hooks:** Conjunto de hooks prontos para uso.
 - **Componentes Utilitários:** Dropdown,Modal,Portal,Toast
 - **Utilitários de Validação e Formatação:** Funções utilitárias.
