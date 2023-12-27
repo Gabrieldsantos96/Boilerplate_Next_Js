@@ -4,7 +4,6 @@ import { useCallback, useState, useEffect, useMemo } from 'react'
 import lightTheme from '@/styles/lightTheme'
 import darkTheme from '@/styles/darkTheme'
 import { IEventManager } from '@/lib/eventManager'
-import { DefaultTheme } from 'styled-components/dist/types'
 
 export type useThemeProps = { themeEventManager: IEventManager<string> }
 
@@ -20,11 +19,6 @@ export function useTheme({ themeEventManager }: useThemeProps) {
     [theme]
   )
 
-  const themeName = useMemo(
-    () => (theme === 'dark' ? 'darkTheme' : 'lightTheme'),
-    [theme]
-  )
-
   useEffect(() => {
     themeEventManager.on('toggleTheme', toggleTheme)
 
@@ -33,5 +27,8 @@ export function useTheme({ themeEventManager }: useThemeProps) {
     }
   }, [themeEventManager, toggleTheme])
 
-  return { themeConfig, themeName }
+  return {
+    themeConfig,
+    themeName: theme === 'dark' ? 'darkTheme' : 'lightTheme'
+  }
 }

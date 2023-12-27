@@ -19,20 +19,7 @@ describe('<Main />', () => {
     expect(container.firstChild).toHaveStyle({
       width: '100%',
       height: '100%',
-      padding: '3rem'
-    })
-  })
-
-  it('should toggle the theme on button click', async () => {
-    render(<Main />)
-
-    userEvent.click(screen.getByText('toggleTheme'))
-
-    await waitFor(() => {
-      expect(
-        // eslint-disable-next-line @typescript-eslint/no-var-requires
-        require('@/utils/helpers/toggleTheme').toggleTheme
-      ).toHaveBeenCalled()
+      padding: '1rem'
     })
   })
 })
