@@ -25,9 +25,7 @@ export default class EventManager<T> implements IEventManager<T> {
   }
 
   emit(event: string, payload: T) {
-    if (!this.listeners.has(event)) {
-      return null
-    }
+    if (!this.listeners.has(event)) return
 
     this.listeners.get(event).forEach((listener: EventManagerListener<T>) => {
       listener(payload)
@@ -37,9 +35,7 @@ export default class EventManager<T> implements IEventManager<T> {
   removeListener(event: string, listenerToRemove: EventManagerListener<T>) {
     const listeners = this.listeners.get(event)
 
-    if (!listeners) {
-      return null
-    }
+    if (!listeners) return
 
     const filteredListeners = listeners.filter(
       (listener: EventManagerListener<T>) => listener !== listenerToRemove

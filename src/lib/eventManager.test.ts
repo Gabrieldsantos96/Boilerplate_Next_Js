@@ -1,5 +1,4 @@
-import { EventManagerDataTransfer } from '@/components/Toast/ToastContainer/useToastContainer'
-import EventManager, { EventManagerListener } from './eventManager'
+import EventManager from './eventManager'
 
 const eventManager = new EventManager()
 
@@ -12,7 +11,7 @@ describe('EventManager', () => {
 
     const result = eventManager.emit(nonExistingEvent, payload)
 
-    expect(result).toBe(null)
+    expect(result).toBe(undefined)
   })
 
   it('should not remove listener if no listeners are registered', () => {
@@ -20,7 +19,7 @@ describe('EventManager', () => {
 
     const result = eventManager.removeListener(nonExistingEvent, listener)
 
-    expect(result).toBe(null)
+    expect(result).toBe(undefined)
   })
 
   it('should initialize with empty listeners map', () => {
